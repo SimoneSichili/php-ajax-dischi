@@ -1,0 +1,49 @@
+main {
+    width: 100%;
+    height: calc(100% - 80px);
+    padding: 50px 0;
+    background-color: $backgroundColor;
+    overflow-y: auto;
+    .wrapper {
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: calc(100% / 5 - 20px);
+                height: 450px;
+                margin-bottom: 30px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 10px;
+                background-color: $cardColor;
+                &:nth-child(5n + 5) {
+                    margin-right: 0;
+                }
+                .card-top {
+                    @include card;
+                    img {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                    }
+                    h3 {
+                        color: #fff;
+                        font-size: 24px;
+                    }
+                }
+                .card-bottom {
+                    @include card;
+                    span {
+                        margin-top: 10px;
+                        font-size: 18px;
+                        color: $greyText;
+                    }
+                }
+            }
+        }
+    }
+}
