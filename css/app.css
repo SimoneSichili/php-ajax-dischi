@@ -47,15 +47,15 @@ main {
 main .wrapper .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 main .wrapper .cards-container .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: calc(100% / 5 - 20px);
+  width: 270px;
   height: 450px;
-  margin-bottom: 30px;
+  margin: 0 10px 30px 10px;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
@@ -71,9 +71,13 @@ main .wrapper .cards-container .card .card-top {
   width: 100%;
 }
 main .wrapper .cards-container .card .card-top img {
+  display: block;
   width: 100%;
+  min-height: 250px;
   margin-bottom: 10px;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .wrapper .cards-container .card .card-top h3 {
   color: #fff;
