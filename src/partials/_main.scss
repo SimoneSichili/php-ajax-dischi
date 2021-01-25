@@ -20,9 +20,6 @@ main {
                 text-align: center;
                 border-radius: 10px;
                 background-color: $cardColor;
-                &:nth-child(5n + 5) {
-                    margin-right: 0;
-                }
                 .card-top {
                     @include card;
                     img {

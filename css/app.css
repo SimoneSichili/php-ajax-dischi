@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap);
 * {
   margin: 0;
   padding: 0;
@@ -60,9 +61,6 @@ main .wrapper .cards-container .card {
   text-align: center;
   border-radius: 10px;
   background-color: #121212;
-}
-main .wrapper .cards-container .card:nth-child(5n+5) {
-  margin-right: 0;
 }
 main .wrapper .cards-container .card .card-top {
   display: flex;
