@@ -6,13 +6,23 @@ var app = new Vue(
         el: "#root",
         data: {
             discs: [],
+            genres: []
         },
         mounted: function() {
             axios
-            .get("http://localhost/php-ajax-dischi/server.php")
+            .get("server.php")
             .then(
                 (response)=> {
                     this.discs = response.data;
+
+                    this.discs.forEach(
+                        element => {
+                            if(this.genres.includes(element.genre) == false) {
+                                this.genres.push(element.genre)
+                            }
+                        }
+                    );
+
                 }
             );
         },

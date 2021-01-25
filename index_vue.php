@@ -22,6 +22,13 @@
         <!-- main -->
         <main>
             <div class="wrapper">
+                <form action="get">
+                    <select name="genres">
+                        <option value="all">Tutti</option>
+                        <option v-for="item in genres" :value="item">{{ item }}</option>
+                    </select>
+                    <input type="submit" value="Invia">
+                </form>
                 <div class="cards-container">
                     <div class="card" v-for="disc in discs">
                         <div class="card-top">

@@ -1850,13 +1850,20 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js").de
 var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: "#root",
   data: {
-    discs: []
+    discs: [],
+    genres: []
   },
   mounted: function mounted() {
     var _this = this;
 
-    axios.get("http://localhost/php-ajax-dischi/server.php").then(function (response) {
+    axios.get("server.php").then(function (response) {
       _this.discs = response.data;
+
+      _this.discs.forEach(function (element) {
+        if (_this.genres.includes(element.genre) == false) {
+          _this.genres.push(element.genre);
+        }
+      });
     });
   }
 });

@@ -45,6 +45,16 @@ main {
   background-color: #282828;
   overflow-y: auto;
 }
+main .wrapper form {
+  margin: 0 0 30px 10px;
+}
+main .wrapper form select {
+  padding: 5px 10px;
+}
+main .wrapper form input {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
 main .wrapper .cards-container {
   display: flex;
   flex-wrap: wrap;

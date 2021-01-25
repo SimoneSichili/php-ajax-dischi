@@ -5,6 +5,16 @@ main {
     background-color: $backgroundColor;
     overflow-y: auto;
     .wrapper {
+        form {
+            margin: 0 0 30px 10px;
+            select {
+                padding: 5px 10px;
+            }
+            input {
+                margin-left: 10px;
+                padding: 5px 10px;
+            }
+        }
         .cards-container {
             display: flex;
             flex-wrap: wrap;
