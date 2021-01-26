@@ -10,6 +10,7 @@
 * Sass (SCSS)
 * Vue.js
 * Axios
+* Laravel Mix
 * PHP
 * JSON
 
