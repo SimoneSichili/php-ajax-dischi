@@ -6,7 +6,8 @@ var app = new Vue(
         el: "#root",
         data: {
             discs: [],
-            genres: []
+            genres: [],
+            currentGenre: "all",
         },
         mounted: function() {
             axios
@@ -25,6 +26,21 @@ var app = new Vue(
 
                 }
             );
+        },
+        methods: {
+            filterGenres: function () {
+                axios
+                .get("server.php", {
+                    params: {
+                        genre: this.currentGenre
+                    }
+                })
+                .then(
+                    (response)=> {
+                        this.discs = response.data;
+                    }
+                );
+            },
         },
     }
 );

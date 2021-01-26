@@ -13,12 +13,12 @@
             <h1>Spotify</h1>
         </div>    
         <div class="nav-right">
-            <form action="get">
-                <select name="genres">
-                    <option value="all">Tutti</option>
+            <form>
+                <select name="genre" v-model="currentGenre">
+                    <option value="all" selected>Tutti</option>
                     <option v-for="item in genres" :value="item">{{ item }}</option>
                 </select>
-                <input type="submit" value="Invia">
+                <input type="button" value="Filtra" @click="filterGenres()">
             </form>
         </div>
     </div>

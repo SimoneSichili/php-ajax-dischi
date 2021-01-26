@@ -1851,7 +1851,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
   el: "#root",
   data: {
     discs: [],
-    genres: []
+    genres: [],
+    currentGenre: "all"
   },
   mounted: function mounted() {
     var _this = this;
@@ -1865,6 +1866,19 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__.default({
         }
       });
     });
+  },
+  methods: {
+    filterGenres: function filterGenres() {
+      var _this2 = this;
+
+      axios.get("server.php", {
+        params: {
+          genre: this.currentGenre
+        }
+      }).then(function (response) {
+        _this2.discs = response.data;
+      });
+    }
   }
 });
 
